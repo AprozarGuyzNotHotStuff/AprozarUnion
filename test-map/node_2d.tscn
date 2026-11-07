@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bwm7xvc84tmdn"]
+
+[ext_resource type="Texture2D" uid="uid://bcw8vsnwa4aqd" path="res://Man_Silhouette_PNG_Clipart.png" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://clsahdjbcbrrp" path="res://dialogue_manager.gd" id="2_0e48y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jgx8s"]
+font_size = 32
+
+[node name="Node2D" type="Node2D" unique_id=201359245]
+position = Vector2(159, 95)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1030760930]
+position = Vector2(-88, -49)
+scale = Vector2(0.024947597, 0.023624038)
+texture = ExtResource("1_wtcfe")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D" unique_id=1642324119]
+position = Vector2(0, -2582.1157)
+
+[node name="DialogueManager" type="CanvasLayer" parent="." unique_id=1942413772]
+process_mode = 3
+script = ExtResource("2_0e48y")
+
+[node name="DialogueBox" type="Control" parent="DialogueManager" unique_id=1439281829]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -529.0
+offset_top = -441.0
+offset_right = -477.0
+offset_bottom = -241.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="DialogueManager/DialogueBox" unique_id=1402878117]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="DialogueText" type="Label" parent="DialogueManager/DialogueBox" unique_id=1992458809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "TEST UNU DOI SI TREI DE ZERO"
+label_settings = SubResource("LabelSettings_jgx8s")
+autowrap_mode = 3
