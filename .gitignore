@@ -25,6 +25,5 @@ mono_crash.*.json
 
 # JetBrains stuff
 .idea/
-*.uid
 *.iml
 *.DotSettings.user
