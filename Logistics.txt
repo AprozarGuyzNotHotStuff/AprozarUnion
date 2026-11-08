@@ -17,8 +17,8 @@ Logica generala a clientilor:
 Logica particulara a clientilor:
 1. Clientul poate fura din magazine - Rata evenimentului:2%/10%
 2. Clientul poate sa numai apara niciodata - Rata evenimetului:2%/10%
-3. Clientul te poate ataca - Rata evenimentului:1,5/10%
-4. Clientul te poate injura -Rata evenimentului:1,5/10%
+3. Clientul te poate ataca - Rata evenimentului:0,5/10%
+4. Clientul te poate injura -Rata evenimentului:5/10%
 5. Clientul poate sa-ti ofere bani falsi -Rata evenimentului:2%/10%
 6. Clientul poate sa schimbe cu bancnote false -Rata evenimentului:1%/10%
 
