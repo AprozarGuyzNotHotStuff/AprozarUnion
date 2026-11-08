@@ -5,4 +5,7 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>AprozarUnion</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="data\items\items.json" />
+  </ItemGroup>
 </Project>
