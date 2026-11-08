@@ -1,0 +1,115 @@
+Sistemul Logic - Clienti
+
+Personalitati:
+1. Obisnuit - Vine sa cumpere - Timp:5:00 - Cumpara frecvent:paine,oua,mezeluri,carne,lactate si altele. - Raritate:80%
+2. Jenant Social - Vorbeste minim - Timp:10:00-3:00 - Cumpara frecvent:paine,oua,mezeluri,carne,lactate si altele. - Raritate:5%
+3. Cucoana - Barfeste - Timp:10:00-5:00 - Cumpara frecvent:paine,alcool,ceai sau cafea. - Raritate:10%
+4. Tarlagiu - Vine in verificari si sa schimbe bani - Timp:2:00-8:00 - Cumpara frecvent:Tigari - Raritate:2,5%
+5. Copil - Este trimis de parinti - Timp:2:00-5:00 - Cumpara frecvent:paine,dulciuri,cafea sau lapte. - Raritate:2,5%
+
+Logica generala a clientilor:
+1. Nivele: Obisnuit<Frustrat<Pleaca
+2. Nivele: Tacut<Usor deranjat<Pleaca
+3. Nivele: Obisnuita<Usor deranjata<Enervata(Incepe sa blesteme)<Pleaca in scarba
+4. Nivele: Obisnuit<Frustrat<Pleaca si primesti "-10 puncte"
+5. Nivele: Energic<Usor deranjat<Frica de parinti<pleaca<vine cu parinti<morala<pleaca
+
+Logica particulara a clientilor:
+1. Clientul poate fura din magazine - Rata evenimentului:2%/10%
+2. Clientul poate sa numai apara niciodata - Rata evenimetului:2%/10%
+3. Clientul te poate ataca - Rata evenimentului:1,5/10%
+4. Clientul te poate injura -Rata evenimentului:1,5/10%
+5. Clientul poate sa-ti ofere bani falsi -Rata evenimentului:2%/10%
+6. Clientul poate sa schimbe cu bancnote false -Rata evenimentului:1%/10%
+
+Rata evenimentelor poate varia dupa zile si decizile jucatorului.
+
+Observatie!:Dupa ziua 25 rata evenimentelor rele creste exponential, dupa ziua 36 rata evenimentelor rele isi ating apogeul (toate vor avea ca valoare 10%), dupa ziua 50 rata evenimentelor rele scade exponential, iar dupa ziua 55 rata devine nula.
+
+Sistemul Logic - Alimente
+
+Inventar:
+01. Paine - Incepem cu ea din ziua 1-55 - Pretul:0.5 lei
+02. Salam de soia - Incepem cu ea din ziua 20-55 - Pretul:1 leu
+03. Carne naturala - Incepem cu ea din ziua 1-20 - Pretul:1kg=0.5 lei
+04. Carne de soia - Incepem cu ea din ziua 22-45 - Pretul:1kg=1 leu
+05. Lapte de vaca - Incepem cu ea din ziua 1-55 - Pretul:1L=2.5 lei
+06. Lapte de capra - Incepem cu ea din ziua 1-22 - Pretul:1L=2.5 lei
+07. Branza - Incepem cu ea din ziua 1-22 - Pretul:3 lei
+08. Biscuiti - Incepem cu ea din ziua 2-40 - Pretul:1 pachet=3 lei
+09. Tigari - Incepem cu ea din ziua 5-50 - Pretul:1 pachet=20 lei - 1 buc. =1 leu
+10. Bere - Incepem cu ea din ziua 5-45 - Pretul:1L=10 lei
+11. Guma turbo - Incepem cu ea din ziua 2-40 - Pretul:0.1 leu
+12. Faina - Incepem cu ea din ziua 10-55 - Pretul:0.75 lei
+13. Margarina - Incepem cu ea din ziua 21-55 - Pretul:2 lei
+14. Oua - Incepem cu ea din ziua 6-55 - Pretul:1 cofrag de oua=4 lei
+15. Ulei - Incepem cu ea din ziua 7-55 - Pretul:1L=2 lei
+16. Cico - Incepem cu ea din ziua 1-40 - Pretul:500ml=0.5 lei
+17. Malai - Incepem cu ea din ziua 7-55 - Pretul:1kg=1 leu
+18. Orez Incepem cu ea din ziua 7-55 - Pretul:1kg=1 leu
+19. Cartofi - Incepem cu ea din ziua 15-48 - Pretul:1kg=2 lei
+20. Ceapa -Incepem cu ea din ziua 14-48 - Pretul:1kg =1 leu
+21. Otet - Incepem cu ea din ziua 8-48 - Pretul:1L=1,5 lei
+22. Zahar - Incepem cu ea din ziua 1-40 - Pretul:1kg=0.25 lei
+23. Mustar la borcan - Incepem cu ea din ziua 1-55 - Pretul:2 lei
+24. Parizer - Incepem cu ea din ziua 25-55 - Pretul:1,75 lei
+
+
+Proprietati generale alimente:
+1. Maximul de alimente cumparate este de 50 buc.
+2. Maximul de alimente cumparate variaza de la ziua 25, adica maxim poti cumpara 30 buc./zi
+3. Maximul de alimente cumparate scade de la ziua 30-50, adica maxim poti cumpara 15 buc./zi
+4. In timpul foametei din 89, statul impune ratii, iar aprozarul va deveni magazin strict de anumite alimente ce le impune statul, securitatea va veni in controale ca sa verifice daca totul ce este vandut este corect si nu se vand alimente "ilegale".
+
+In total sunt 22 de produse si 55 de zile.
+
+Sistemul Logic - Banii si puncte
+
+Bancnote la dispozitie:
+
+ - 1 leu
+ - 3 lei
+ - 5 lei
+ - 10 lei
+ - 25 lei
+ - 50 lei
+ - 100 lei
+
+Mecanism banknote:
+
+1. Unele banknote pot fi mai rigide la atingere, jucatorul primeste un hint (se schimba viteza cursorului pe banknote, in functie de textura).
+2. Codul de Securitate poate fi verificat daca jucatorul prime un hint si ia in considerare.
+3. Daca cumparatorul NPC n-are bani, jucatorul poate sa aleaga daca acesta ii ofera de pomana (pe caiet) sau nu-l serveste deloc.
+4. Daca cumparatorul NPC ofera bani falsi, jucatorul poate sa raporteze la militie dar toata lumea o sa-l stie ca turnator (poti pierde clienti si inside lore important) sau poate sa nu-i serveasca deloc.
+5. Cu cat jucatorul are mai multe datorii de luat, cu atat suspiciunea managerului creste, daca suspiciunea si-a atins apogeul managerul poate sa te dea afara.
+6. Totusi jucatorul poate negocia cu managerul, iar salariul poate fi taiat, aducand in familie foamete si frig.
+
+Punctele (ochiul militiei)
+
+Formula: -P = -Rp = -If = +C <=> +P = +If = +Rp = -C
+
+Legenda:
+P= puncte
+Rp= reputatie
+If= infractiuni
+C= controale
+
+Sistemul Logic - Securitate
+
+Sistemul Logic - statut social
+
+Sistemul Logic - Familie
+
+Sistemul Logic - Depozit
+
+Sistemul Logic - Ture de noapte ilegale
+
+Sistemul Logic - Timp,Calendar,Vremea afara
+
+Sistemul Logic - Organizatii
+
+Sistemul Logic - Inscriere/angajare de la inceputul jocului
+
+Sistemul Logic - Bilete/plicuri si scrisori
+
+Sistemul Logic - Dialog
