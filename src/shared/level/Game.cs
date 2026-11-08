@@ -1,13 +1,15 @@
 using Godot;
 using System;
 using System.Linq;
+using AprozarUnion.Shared.Customer;
 using AprozarUnion.Shared.Data.Item;
+using AprozarUnion.Shared.Level.Store;
 
 namespace AprozarUnion.Shared.Level;
 
 public partial class Game : Node2D
 {
-    [Export] private float timeScale = 100.0f; // In-game minutes passing per 1 real-world second, use "2.0f / 3.0f" for final
+    [Export] private float timeScale = 2.0f / 3.0f; // In-game minutes passing per 1 real-world second, use "2.0f / 3.0f" for final
     [Export] private int startHour = 6;             // Store opening time (6:00 AM)
     [Export] private int endHour = 18;              // Store closing time (6:00 PM)
     
@@ -20,6 +22,8 @@ public partial class Game : Node2D
     private int _currentHour;
     private int _currentMinute;
     private bool _isDayActive = true;
+    
+    private TickManager _tickManager = new();
 
     public override void _Ready()
     {
@@ -40,6 +44,12 @@ public partial class Game : Node2D
             
             AdvanceTime(minutesToAdd);
         }
+        
+        this._tickManager.updateTick(delta);
+        if (this._tickManager.DoTickThisFrame)
+        {
+            this.Tick();
+        }
     }
 
     private void AdvanceTime(int minutes)
@@ -52,7 +62,7 @@ public partial class Game : Node2D
             if (_currentHour >= endHour) { CloseDay(); return; }
         }
         EmitSignal(SignalName.MinuteChanged, _currentDay, _currentHour, _currentMinute);
-        GD.Print($"Day {_currentDay} - Time: {_currentHour:D2}:{_currentMinute:D2}");
+        // GD.Print($"Day {_currentDay} - Time: {_currentHour:D2}:{_currentMinute:D2}");
     }
 
     private void StartDay()
@@ -79,4 +89,15 @@ public partial class Game : Node2D
         if (_currentDay > 55) { GD.Print("Game complete"); return; }
         StartDay();
     }
+
+    #region Ticking and game
+    
+    private CustomerSpawner spawner = new(new Queue());
+
+    public void Tick()
+    {
+        spawner.tick();
+    }
+
+    #endregion
 }
