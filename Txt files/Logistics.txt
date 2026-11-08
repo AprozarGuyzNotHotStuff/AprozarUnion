@@ -1,11 +1,11 @@
 Sistemul Logic - Clienti
 
 Personalitati:
-1. Obisnuit - Vine sa cumpere - Timp:5:00 - Cumpara frecvent:paine,oua,mezeluri,carne,lactate si altele. - Raritate:80%
+1. Obisnuit - Vine sa cumpere - Timp:5:00 - Cumpara frecvent:paine,oua,mezeluri,carne,lactate si altele. - Raritate:50%
 2. Jenant Social - Vorbeste minim - Timp:10:00-3:00 - Cumpara frecvent:paine,oua,mezeluri,carne,lactate si altele. - Raritate:5%
-3. Cucoana - Barfeste - Timp:10:00-5:00 - Cumpara frecvent:paine,alcool,ceai sau cafea. - Raritate:10%
-4. Securitatea/Militia - Vine in verificari si sa schimbe bani - Timp:2:00-8:00 - Cumpara frecvent:Tigari - Raritate:2,5%
-5. Copil - Este trimis de parinti - Timp:2:00-5:00 - Cumpara frecvent:paine,dulciuri,cafea sau lapte. - Raritate:2,5%
+3. Cucoana - Barfeste - Timp:10:00-5:00 - Cumpara frecvent:paine,alcool,ceai sau cafea. - Raritate:15%
+4. Securitatea/Militia - Vine in verificari si sa schimbe bani - Timp:2:00-8:00 - Cumpara frecvent:Tigari - Raritate:25%
+5. Copil - Este trimis de parinti - Timp:2:00-5:00 - Cumpara frecvent:paine,dulciuri,cafea sau lapte. - Raritate:15%
 
 Logica generala a clientilor:
 1. Nivele: Obisnuit<Frustrat<Pleaca
